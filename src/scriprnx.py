@@ -4,10 +4,12 @@ from logger import get_logger
 from script1 import parsing
 import subprocess
 
+from models import Path
+
 app = FastAPI()
 logger=get_logger("scriprnx")
 
-def reformat_crx_to_rnx(crx_file_path):
+def reformat_crx_to_rnx(crx_file_path: str):
     if not crx_file_path.endswith(".crx"):#Проверяю файл на формат (полезно не удалять!)
         logger.error(f"The does not have the .crx format")
         return {"Error": f"Name file '{crx_file_path}' not a .crx file"}
@@ -22,7 +24,7 @@ def reformat_crx_to_rnx(crx_file_path):
     if os.path.exists(crx_file_path):
         try:
             logger.info(f'{crx_file_path} has been reformatted to {rnx_file_path}')
-            subprocess.run(['RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
+            subprocess.run(['../../RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
             return {"info": "The request has been completed."}
         except subprocess.CalledProcessError as e:
             logger.error(f"Error converting CRX to RNX: {e}")
@@ -36,15 +38,15 @@ def hello():
     logger.info("The application responds to your requests successfully.")
     return "hello world!"
 
-@app.get("/reformat/{crx_file_path}")
-async def reformat_crx_by_path(crx_file_path: str):
+@app.post("/reformat")
+async def reformat_crx_by_path(crx_file_path: Path):
     logger.info("The file format change has started: start func (reformat_crx_to_rnx)")
-    return reformat_crx_to_rnx(crx_file_path)
+    return reformat_crx_to_rnx(crx_file_path.path)
 
-@app.get("/parsing/{crx_file_path}")
-async def parsing_file_name(crx_file_path: str):
+@app.post("/parsing")
+async def parsing_file_name(crx_file_path: Path):
     logger.info("parsing")
-    return parsing(crx_file_path)
+    return parsing(crx_file_path.path)
 
 
 if __name__ == "__scriprnx__":
