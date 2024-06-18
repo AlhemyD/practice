@@ -1,0 +1,34 @@
+2024-06-18 10:44:50,714 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:44:50,791 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:18,037 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:18,111 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:25,419 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:25,477 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:47,350 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:47,351 — scriprnx — ERROR — The darw00aus-r-20240010000-01d-30s-mocrx does not have the .crx format - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:54,091 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:54,143 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:47:57,077 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:48:01,368 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 10:48:01,408 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:01:14,115 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:01:14,116 — scriprnx — INFO — The beginning of the format change. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:01:14,171 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:01:23,298 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:01:23,299 — scriprnx — ERROR — The file name 'darw00aus-r-20240010000-01d-30s-.crx' does not exist in this directory - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:07:04,828 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:07:04,830 — scriprnx — INFO — The beginning of the format change. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:07:04,886 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:09:07,794 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:11:22,568 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:11:22,571 — scriprnx — INFO — The beginning of the format change. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:11:22,615 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:39,703 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:39,704 — scriprnx — ERROR — Such a file already exists. Formatting is not required. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:43,826 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:43,826 — scriprnx — ERROR — Such a file already exists. Formatting is not required. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:56,471 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:56,472 — scriprnx — INFO — The beginning of the format change. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:17:56,506 — scriprnx — INFO — darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:18:00,081 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
+2024-06-18 11:18:00,083 — scriprnx — ERROR — Such a file already exists. Formatting is not required. - Linux-5.15.0-107-generic-x86_64-with-glibc2.35
