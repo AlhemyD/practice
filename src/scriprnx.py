@@ -22,7 +22,7 @@ def reformat_crx_to_rnx(crx_file_path):
     if os.path.exists(crx_file_path):
         try:
             logger.info(f'{crx_file_path} has been reformatted to {rnx_file_path}')
-            subprocess.run(['/home/dasha/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
+            subprocess.run(['~/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
             return {"info": "The request has been completed."}
         except subprocess.CalledProcessError as e:
             logger.error(f"Error converting CRX to RNX: {e}")
