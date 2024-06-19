@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from logger import get_logger
-from script1 import parsing
+from parser import parsing
 from crud import reformat_crx_to_rnx
 import os
 
