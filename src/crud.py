@@ -1,5 +1,8 @@
 import os
 import subprocess
+from logger import get_logger
+
+logger=get_logger("crud")
 
 def reformat_crx_to_rnx(crx_file_path: str):
     if not crx_file_path.endswith(".crx"):#Проверяю файл на формат (полезно не удалять!)
@@ -16,7 +19,7 @@ def reformat_crx_to_rnx(crx_file_path: str):
     if os.path.exists(crx_file_path):
         try:
             logger.info(f'{crx_file_path} has been reformatted to {rnx_file_path}')
-            subprocess.run(['../../RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
+            subprocess.run(['../lib/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
             return {"info": "The request has been completed."}
         except subprocess.CalledProcessError as e:
             logger.error(f"Error converting CRX to RNX: {e}")
