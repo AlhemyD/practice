@@ -36,3 +36,8 @@ def download_file_from_url():
 
     print(f"{file_name} was downloaded successfully")
     logger.info(f"File downloaded successfully to {file_name}")
+
+schedule.every().day.at("23:13").do(download_file_from_url)
+
+while True:
+    schedule.run_pending()
