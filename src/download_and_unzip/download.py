@@ -1,12 +1,14 @@
 import requests
 import sys
+sys.path.append("../")
 from datetime import datetime, timedelta
 import schedule
 import time
 import os
-from src import logger
 
-logger = logger.get_logger("download")
+from logger import get_logger
+
+logger = get_logger("download")
 
 def download_file_from_url():
     today = datetime.now()
