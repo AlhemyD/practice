@@ -1,10 +1,9 @@
 import paho.mqtt.client as mqtt_client
 import time
-broker="broker.emqx.io"
+broker="localhost"
 def on_message(client, userdata, message):
-    time.sleep(1)
-    data = str(message.payload.decode("utf-8"))
-    print(f"received message = {data}")
+    station, data = str(message.payload.decode("utf-8")).split("@%@%!")
+    print(f"{station} received message = {data}")
 
 client = mqtt_client.Client(
             mqtt_client.CallbackAPIVersion.VERSION2,
@@ -14,6 +13,7 @@ client.on_message=on_message
 client.connect(broker)
 client.loop_start()
 client.subscribe("station/data")
+print("\nstarting subscribtion on station/data")
 while True:
     try:
         time.sleep(1800)
