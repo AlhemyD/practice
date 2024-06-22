@@ -12,6 +12,7 @@ from logger import get_logger
 logger = get_logger("download")
 
 def download_file_from_url():
+    print("Data loading will start at 22:00")
     today = datetime.now()
     date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
     #link = "https://bki.matecdn.ru/-/10e7e137-4fc3-45d1-a37e-bdd4a390e537/darw00aus-r-20240010000-01d-30s-mocrx.gz"
