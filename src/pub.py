@@ -1,33 +1,30 @@
 import paho.mqtt.client as mqtt_client
-import time
 from models import Publisher
-import threading
+import sys
 
-L=1000
-pubs=[]
-for i in range(L):
-    pubs.append(Publisher("station"+str(i),"localhost","station/data"))
-def publ(pub):
+'''
+скрипт вызывается командой вида^
 
-    pub.connect()
-    pub.loop_start()
-    for i in range (5):
-        pub.publish(f"{pub.station}@%@%!data - {i}")
-        
-    pub.disconnect()
-    pub.loop_stop()
+python3 pub.py {station} {arg1 arg2 arg3}
 
-threads=[]
-for i in range(L):
-    threads.append(threading.Thread(target=publ, args=(pubs[i],)))
-for i in range(L):
-    threads[i].start()
-for i in range(L):
-    threads[i].join()
-pubs[0].connect()
-pubs[0].loop_start()
-pubs[0].publish(f"{pubs[0].station}@%@%!All data was sent")
-pubs[0].disconnect()
-pubs[0].loop_stop()
+т.е.
+
+python3 pub.py station1 1 2 3 4 5 6
 
 
+
+'''
+station = sys.argv[1] #Тогда здесь будет station1
+data = sys.argv[2:] #А здесь будет список ['1', '2', '3', '4', '5', '6']
+
+'''
+Предполагается, что в data будут передаваться пропарсенные данные, 
+которые нужно опубликовать
+'''
+pub = Publisher(station,"localhost","station/data")
+pub.connect()
+pub.loop_start()
+for i in data:
+    pub.publish(f"{pub.station}@%@%!{i}")
+pub.disconnect()
+pub.loop_stop()
