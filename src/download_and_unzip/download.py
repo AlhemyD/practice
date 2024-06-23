@@ -42,7 +42,7 @@ def download_file_from_url():
     logger.info(f"File downloaded successfully to {file_name}")
 
     print(f"start to unpack")
-    subprocess.call(f"unzip_data.sh {date}", shell=True)
+    subprocess.run(f"./unzip_data.sh {date}", shell=True)
     logger.info(f"Files unpacked successfully")
 
 schedule.every().day.at("23:13").do(download_file_from_url)
