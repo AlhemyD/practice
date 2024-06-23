@@ -3,7 +3,7 @@ Description=Demon Service For %i Station
 
 [Service]
 # Command to execute when the service is started
-ExecStart=/usr/bin/python3 /home/mgwooorl/practice/src/pub.py %i
+ExecStart=/usr/bin/python3 /home/$(whoami)/practice/src/pub.py %i
 
 # Disable Python's buffering of STDOUT and STDERR, so that output from the
 # service shows up immediately in systemd's logs
