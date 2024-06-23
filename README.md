@@ -5,6 +5,7 @@
 
 `https://terras.gsi.go.jp/ja/crx2rnx.html` - Дата обращения: 19.06.2024
 ## Архитектура проекта ##
+![Архитектура](project_scheme_drawio.svg)
 
 ## Загрузка файлов ##
 
