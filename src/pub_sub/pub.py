@@ -1,12 +1,14 @@
-import paho.mqtt.client as mqtt_client
-import sys
+import sys, requests, json
 sys.path.append("../modules")
 from models import Publisher
 sys.path.append("../log")
 from logger import get_logger
-import requests, json, schedule
+from datetime import datetime, timedelta
+from apscheduler.schedulers.background import BackgroundScheduler
 
+scheduler = BackgroundScheduler()
 logger = get_logger("pub")
+
 '''
 скрипт вызывается командой вида^
 
@@ -38,14 +40,15 @@ pub.loop_start()
 
 
     
-#date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
-date="2024-06-23"
+date = (datetime.now() - timedelta(days=200)).strftime('%Y-%m-%d')
+#date="2024-06-23"
 link=f"http://localhost:8000/parsing/{date}/{rnx_file_name}"
 response = requests.get(link, stream=True).json()
 if "error" in response:
+    logger.error(f"error during request for station {pub.station} - error - {response['error']}")
     print(response)
 else:
-    print(response["parse_data"][-1])
+    logger.info(f"Parsed data for station {pub.station} successfully. Starting scheduler")
 
     '''
     '{} {}: {} {}'.format(
@@ -58,13 +61,18 @@ else:
     "2024-01-01 00:00:00 G12: 7.8285638894945935 22.766467356433278",
     '''
     for data in response["parse_data"]:
-        time=data.split(" ")[1]
-        schedule.every().day.at(time).do(publ, pub, data)
+        date=list(map(int, (datetime.now().strftime('%Y-%m-%d')).split("-")))
+        time = list(map(int, str(data.split(" ")[1]).split(":")))
+        dt=datetime(date[0],date[1],date[2], time[0],time[1],time[2])
 
-while True:
-    try:
-        schedule.run_pending()
-    except KeyboardInterrupt or Exception:
-        pub.disconnect()
-        pub.loop_stop()
-        break
+        scheduler.add_job(publ, 'date', run_date=dt, args=[pub,data])
+scheduler.start()
+
+try:
+    while True:
+        pass
+except KeyboardInterrupt or Exception:
+    pub.disconnect()
+    pub.loop_stop()
+    scheduler.shutdown()
+    logger.error(f"Cought an Exception for station {pub.station} - Exception - {Exception}")
