@@ -7,9 +7,9 @@ from logger import get_logger
 logger=get_logger("formatting")
 
 def reformat_crx_to_rnx(crx_file_path: str):
-#    if not(crx_file_path.endswith(".crx") or crx_file_path.endswith(".24d")):#Проверяю файл на формат (полезно не удалять!)
-#        logger.error(f"The file is  not a .crx or .24d")
-#        return {"error": f"file_name '{crx_file_path}' is not a .crx or .24d file"}
+    if not(crx_file_path.endswith(".crx") or crx_file_path.endswith("d")):#Проверяю файл на формат (полезно не удалять!)
+        logger.error(f"The file is  not a .crx or .24d")
+        return {"error": f"file_name '{crx_file_path}' is not a .crx or .24d file"}
 #    if crx_file_path.endswith(".crx"):
 #        rnx_file_path = crx_file_path.replace('.crx', '.rnx')
 #    else:
