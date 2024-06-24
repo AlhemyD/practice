@@ -1,8 +1,9 @@
 import os
 import subprocess
+sys.path.append("../log")
 from logger import get_logger
 
-logger=get_logger("crud")
+logger=get_logger("formatting")
 
 def reformat_crx_to_rnx(crx_file_path: str):
 #    if not(crx_file_path.endswith(".crx") or crx_file_path.endswith(".24d")):#Проверяю файл на формат (полезно не удалять!)

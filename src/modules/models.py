@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 import paho.mqtt.client as mqtt_client
-from logger import get_logger
+
 
 class Path(BaseModel):
     path: str

@@ -1,4 +1,5 @@
 import paho.mqtt.client as mqtt_client
+sys.path.append("../models")
 from models import Publisher
 import sys
 

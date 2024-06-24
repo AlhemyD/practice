@@ -1,5 +1,6 @@
 from gnss_tec import rnx
 import os
+sys.path.append("../log")
 from logger import get_logger
 
 logger=get_logger("parser")
