@@ -1,7 +1,8 @@
 import paho.mqtt.client as mqtt_client
+import sys
 sys.path.append("../models")
 from models import Publisher
-import sys
+
 
 '''
 скрипт вызывается командой вида^

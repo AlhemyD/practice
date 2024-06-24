@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 sys.path.append("../log")
 from logger import get_logger
@@ -21,7 +22,7 @@ def reformat_crx_to_rnx(crx_file_path: str):
 
     if os.path.exists(crx_file_path):
         try:
-            subprocess.run(['../lib/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
+            subprocess.run(['../../lib/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX', crx_file_path, '-f'], check=True)
             subprocess.run(["rm", crx_file_path, '-f'], check=True)
             logger.info(f'{crx_file_path} has been reformatted to {file_name_rnx}')
             return {"file_name": file_name_rnx}
