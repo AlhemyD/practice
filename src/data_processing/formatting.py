@@ -1,7 +1,7 @@
 import os
 import sys
 import subprocess
-sys.path.append("../log")
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
 from logger import get_logger
 
 logger=get_logger("formatting")

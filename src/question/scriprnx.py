@@ -1,13 +1,11 @@
 from fastapi import FastAPI
-import sys
+import sys, os
 
-sys.path.append("../log")
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
 from logger import get_logger
-
-sys.path.append("../data_processing")
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../data_processing'))
 from parser import parsing
 from formatting import reformat_crx_to_rnx
-import os
 
 app = FastAPI()
 logger=get_logger("scriprnx")

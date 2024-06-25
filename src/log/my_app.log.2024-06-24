@@ -1,0 +1,76 @@
+2024-06-24 12:44:20,043 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:44:20,043 — parser — ERROR — File ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx does not exist - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:02,783 — scriprnx — INFO — The file format change has started: start func (reformat_crx_to_rnx) - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:03,521 — formatting — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.crx has been reformatted to darw00aus-r-20240010000-01d-30s-mo.rnx - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:12,241 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:16,980 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:25,835 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 12:46:30,546 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:11:22,579 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:11:26,961 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:11:53,092 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:11:57,426 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:12:24,305 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:12:28,453 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:12:52,192 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:12:56,342 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:13:09,908 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:13:14,079 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:23:13,937 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:23:18,061 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:23:37,527 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:23:37,527 — parser — ERROR — File's extension is not correct. file_name: ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rn - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:24:03,226 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:24:03,226 — parser — ERROR — File's extension is not correct. file_name: ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rn - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:24:09,187 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:24:13,428 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:39:21,347 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:39:25,592 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:39:39,105 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:39:43,146 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:41:43,691 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:41:47,923 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:46:28,256 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:46:32,511 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:47:57,114 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 13:48:01,378 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:56:11,608 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:56:15,620 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:56:44,589 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:56:48,582 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:58:40,841 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:58:45,541 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:59:38,655 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 15:59:42,625 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:00:56,743 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:01:00,781 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:17:55,414 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:17:59,601 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:25:01,893 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:25:06,075 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:25:51,143 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:25:55,412 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:27:54,722 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:27:58,793 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:28:21,131 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:28:25,161 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:29:06,249 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:29:10,253 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:30:48,777 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:30:52,898 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:31:16,356 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:31:20,461 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:33:34,776 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:33:39,000 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:46:36,395 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:46:36,397 — parser — ERROR — File ../../data/2023-12-07/123.rnx does not exist - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:46:36,398 — pub — ERROR — error during request for station 123.rnx - error - File ../../data/2023-12-07/123.rnx does not exist - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:46:47,803 — pub — ERROR — Cought an Exception for station 123.rnx - Exception - <class 'Exception'> - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:46:58,349 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:47:02,670 — parser — INFO — ../../data/2024-06-23/123.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:47:02,832 — scriprnx — INFO — Starting parsing - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:47:06,951 — parser — INFO — ../../data/2024-06-23/darw00aus-r-20240010000-01d-30s-mo.rnx parsing has been completed - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:47:07,154 — pub — INFO — Parsed data for station 123.rnx successfully. Starting scheduler - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:47:07,175 — pub — INFO — Parsed data for station darw00aus-r-20240010000-01d-30s-mo.rnx successfully. Starting scheduler - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:49:16,268 — pub — ERROR — Cought an Exception for station 123.rnx - Exception - <class 'Exception'> - Linux-5.15.0-112-generic-x86_64-with-glibc2.35
+2024-06-24 16:49:30,199 — pub — ERROR — Cought an Exception for station darw00aus-r-20240010000-01d-30s-mo.rnx - Exception - <class 'Exception'> - Linux-5.15.0-112-generic-x86_64-with-glibc2.35

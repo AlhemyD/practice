@@ -1,7 +1,8 @@
-import sys, requests, json
-sys.path.append("../modules")
+import sys, requests, json, os
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../modules'))
 from models import Publisher
-sys.path.append("../log")
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
+
 from logger import get_logger
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -40,13 +41,15 @@ pub.loop_start()
 
 
     
-date = (datetime.now() - timedelta(days=200)).strftime('%Y-%m-%d')
-#date="2024-06-23"
+#date = (datetime.now() - timedelta(days=200)).strftime('%Y-%m-%d')
+date="2024-06-23"
 link=f"http://localhost:8000/parsing/{date}/{rnx_file_name}"
 response = requests.get(link, stream=True).json()
 if "error" in response:
     logger.error(f"error during request for station {pub.station} - error - {response['error']}")
     print(response)
+    pub.disconnect()
+    pub.loop_stop()
 else:
     logger.info(f"Parsed data for station {pub.station} successfully. Starting scheduler")
 
@@ -66,13 +69,13 @@ else:
         dt=datetime(date[0],date[1],date[2], time[0],time[1],time[2])
 
         scheduler.add_job(publ, 'date', run_date=dt, args=[pub,data])
-scheduler.start()
+    scheduler.start()
 
-try:
-    while True:
-        pass
-except KeyboardInterrupt or Exception:
-    pub.disconnect()
-    pub.loop_stop()
-    scheduler.shutdown()
-    logger.error(f"Cought an Exception for station {pub.station} - Exception - {Exception}")
+    try:
+        while True:
+            pass
+    except KeyboardInterrupt or Exception:
+        pub.disconnect()
+        pub.loop_stop()
+        scheduler.shutdown()
+        logger.error(f"Cought an Exception for station {pub.station} - Exception - {Exception}")

@@ -1,6 +1,5 @@
 #!/bin/bash
-
-data_dir="/home/$(whoami)/practice/data/$1"
+data_dir="/home/$(logname)/practice/data/$1"
 temp = "/etc/systemd/system/station_@.service"
 
 # Перебираем файлы по дате в директории data

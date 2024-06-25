@@ -1,12 +1,12 @@
 from gnss_tec import rnx
 import sys
 import os
-sys.path.append("../log")
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
 from logger import get_logger
 
 logger=get_logger("parser")
 
-def parsing(file_name: str):
+async def parsing(file_name: str):
     if not(file_name.endswith(".rnx") or file_name.endswith("o")):
         logger.error(f"File's extension is not correct. file_name: {file_name}")
         return {"error":f"File name not correct - {file_name}"}

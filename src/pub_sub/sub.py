@@ -1,5 +1,8 @@
 import paho.mqtt.client as mqtt_client
-import time
+import time, sys, os
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
+from logger import get_logger
+logger=get_logger("sub")
 broker="localhost"
 def on_message(client, userdata, message):
     station, data = str(message.payload.decode("utf-8")).split("@%@%!")
@@ -13,11 +16,13 @@ client.on_message=on_message
 client.connect(broker)
 client.loop_start()
 client.subscribe("station/data")
+logger.info("Started subscription on station/data")
 print("\nstarting subscribtion on station/data")
 while True:
     try:
         time.sleep(1800)
     except KeyboardInterrupt:
+        logger.warning("Ending subscription on station/data")
         print("\nending subscribing")
         break
 
