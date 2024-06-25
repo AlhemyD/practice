@@ -1,6 +1,8 @@
 #!/bin/bash
-data_dir="/home/$(logname)/practice/data/$1"
-temp = "/etc/systemd/system/station_@.service"
+
+user=$(logname)
+
+data_dir="/home/$user/practice/data/$1"
 
 # Перебираем файлы по дате в директории data
 for file in $(ls -t $data_dir); do
@@ -15,8 +17,9 @@ for file in $(ls -t $data_dir); do
         fi
     else
         # Создаем новый юнит файл для данного файла
-        cp /etc/systemd/system/station_@.service /etc/systemd/system/$unit_name
-        sed -i "s/%I/$file/g" /etc/systemd/system/$unit_name
+        cp /home/$user/practice/src/all_services/station_@.service /etc/systemd/system/$unit_name
+        sed -i "s/%i/$file/g" /etc/systemd/system/$unit_name
+        sed -i "s/%user/$user/g" /etc/systemd/system/$unit_name
         systemctl daemon-reload
         systemctl start $unit_name
     fi
