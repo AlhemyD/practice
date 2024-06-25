@@ -36,21 +36,21 @@ def download_file_from_url():
                 sys.stdout.write("\r[%s%s]" % ('=' * done, ' ' * (50 - done)))
                 sys.stdout.flush()
 
-    print(f"{file_name} was downloaded successfully")
+#    print(f"{file_name} was downloaded successfully")
     logger.info(f"File downloaded successfully to {file_name}")
     
     #закоментировала потому что эта часть кода удёт в main.py
     
-    print(f"start to unpack")
-    subprocess.run(f"sudo bash unzip_data.sh {date}", shell=True)
-    logger.info(f"Files unpacked successfully")
+#    print(f"start to unpack")
+#    subprocess.run(f"sudo bash unzip_data.sh {date}", shell=True)
+#    logger.info(f"Files unpacked successfully")
 
 #Это должно быть тут потому что функция запускается по времени и 
 #print там не нужен. Нужно чтобы он был вне функции когда время ещё не наступило
 
-print("Data loading will start at 22:00")
-logger.info("test loggar")
-schedule.every().day.at("08:59").do(download_file_from_url)
+#print("Data loading will start at 22:00")
+#logger.info("test loggar")
+#schedule.every().day.at("08:59").do(download_file_from_url)
 
-while True:
-    schedule.run_pending()
+#while True:
+#    schedule.run_pending()
