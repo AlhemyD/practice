@@ -6,7 +6,7 @@ from logger import get_logger
 
 logger=get_logger("parser")
 
-async def parsing(file_name: str):
+def parsing(file_name: str):
     if not(file_name.endswith(".rnx") or file_name.endswith("o")):
         logger.error(f"File's extension is not correct. file_name: {file_name}")
         return {"error":f"File name not correct - {file_name}"}
