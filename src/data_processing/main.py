@@ -16,7 +16,8 @@ from datetime import datetime, timedelta
 
 logger = get_logger("main")
 today = datetime.now()
-date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
+#получаю завтрашнюю дату
+date = (today - timedelta(days=199)).strftime('%Y-%m-%d')
 
 #создание директории data
 
