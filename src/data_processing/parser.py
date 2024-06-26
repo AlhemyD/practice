@@ -14,16 +14,20 @@ def parsing(file_name: str):
         logger.error(f"File {file_name} does not exist")
         return {"error":f"File {file_name} does not exist"}
     res={"parse_data":[]}
-    with open(file_name) as obs_file:
-        reader = rnx(obs_file)
-        for tec in reader:
-            res["parse_data"].append(
-                '{} {}: {} {}'.format(
-                    tec.timestamp,
-                    tec.satellite,
-                    tec.phase_tec,
-                    tec.p_range_tec,
+    try:
+        with open(file_name) as obs_file:
+            reader = rnx(obs_file)
+            for tec in reader:
+                res["parse_data"].append(
+                    '{} {}: {} {}'.format(
+                        tec.timestamp,
+                        tec.satellite,
+                        tec.phase_tec,
+                        tec.p_range_tec,
+                    )
                 )
-            )
-    logger.info(f"{file_name} parsing has been completed")
-    return res
+        logger.info(f"{file_name} parsing has been completed")
+        return res
+    except Exception as e:
+        logger.error(f"Error occured during parsing - Error: {e}")
+        return {"error":f"{e}"}
