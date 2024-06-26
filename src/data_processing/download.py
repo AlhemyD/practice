@@ -3,7 +3,6 @@ sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log
 from datetime import datetime, timedelta
 import schedule
 import time
-import subprocess
 import requests
 from logger import get_logger
 
@@ -16,14 +15,16 @@ def download_file_from_url(date):
     link = f"https://api.simurg.space/datafiles/map_files?date={date}"
     file_name = f"{date}.zip"
     #file_name = "2023-12-05.zip"
-    file_path = os.path.join("../../data", file_name)
+    file_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),"../../data", file_name)
     logger.info(f"Downloading file from {link}...")
-
+    if not(os.path.exists(file_path)):
+        with open(file_path, "w") as file:
+            pass
     with open(file_path, "wb") as f:
         print("Downloading %s" % file_name)
         response = requests.get(link, stream=True)
         total_length = response.headers.get('content-length')
-
+        response = requests.get(link, stream=True)
         if total_length is None:
             f.write(response.content)
         else:

@@ -15,24 +15,30 @@ from datetime import datetime, timedelta
 
 
 logger = get_logger("main")
+today = datetime.now()
+date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
 
 #создание директории data
 
 directory = os.path.join(os.path.dirname(os.path.realpath(__file__)),"../../data")
-
+if os.path.exists(os.path.join(directory,date)):
+    logger.warning(f"path {os.path.join(directory,date)} already exists so deleting it")
+    subprocess.run(f"sudo rm -r {os.path.join(directory,date)}",shell=True,check=True)
+if os.path.exists(os.path.join(directory,date+".zip")):
+    logger.warning(f"file {os.path.join(directory,date+'.zip')} already exists so deleting it")
+    subprocess.run(f"rm {os.path.join(directory,date+'.zip')}",shell=True,check=True)
 if not os.path.exists(directory):
     os.makedirs(directory)
     logger.info(f"Directory '{directory}' created successfully.")
 
     #запуск скрипта скачиванияls
-today = datetime.now()
-date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
 download_file_from_url(date)
 file_name=date
 try:
 #архивация
     logger.info(f"start to unpack")
-    subprocess.run(f"bash unzip_data.sh {file_name}", shell=True, check=True)
+    unzip_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),"unzip_data.sh")
+    subprocess.run(f"bash {unzip_path} {file_name}", shell=True, check=True)
     logger.info(f"Files unpacked successfully")
 except subprocess.CalledProcessError as e:
     logger.error(f"A file archiving error has occurred: {e}")
@@ -50,7 +56,15 @@ for file in range (len(count_file)):
 logger.info("All files has been successfully reformatted")
 #schedule.every().day.at("05:02").do(main)
 
+logger.info("Starting FastAPI")
+fastapi_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),'../all_services/create_scriprnx_service.sh')
+subprocess.run(f"", shell=True, check=True)
 
+
+
+logger.info("Starting a creation of DAEMONS")
+cpub_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),'../all_services/create_pub_services.sh')
+subprocess.run(f"sudo bash {cpub_path} {date}", shell=True, check=True)
 #while True:
 #    schedule.run_pending()
 
