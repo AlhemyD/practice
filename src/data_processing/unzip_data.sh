@@ -3,7 +3,7 @@
 user=$(logname)
 
 # add the data directory at the beginning and .zip at the end
-archive_name="/home/$user/practice/data/$1/$1.zip"
+archive_name="/home/$user/practice/data/$1.zip"
 
 # unpack the file into a folder named after the argument
 unzip "$archive_name" -d "/home/$user/practice/data/$1"
