@@ -29,6 +29,7 @@ for file in $(ls -t $data_dir); do
             sed -i "s/%i/${file:0:4}/g" /etc/systemd/system/$unit_name
         fi
 
+        sed -i "s/%date/$1/g" /etc/systemd/system/$unit_name
         sed -i "s/%user/$user/g" /etc/systemd/system/$unit_name
         systemctl daemon-reload
         systemctl enable $unit_name
