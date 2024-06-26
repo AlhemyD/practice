@@ -21,6 +21,7 @@ for file in $(ls -t $data_dir); do
         sed -i "s/%i/$file/g" /etc/systemd/system/$unit_name
         sed -i "s/%user/$user/g" /etc/systemd/system/$unit_name
         systemctl daemon-reload
+        systemctl enable $unit_name
         systemctl start $unit_name
     fi
 done
