@@ -3,7 +3,7 @@ import time, sys, os
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
 from logger import get_logger
 logger=get_logger("sub")
-broker="localhost"
+broker="192.168.200.231"
 def on_message(client, userdata, message):
     station, data = str(message.payload.decode("utf-8")).split("@%@%!")
     print(f"{station} received message = {data}")

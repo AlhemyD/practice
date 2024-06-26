@@ -9,9 +9,9 @@ from logger import get_logger
 
 logger = get_logger("download")
 
-def download_file_from_url(): 
-    today = datetime.now()
-    date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
+def download_file_from_url(date): 
+    #today = datetime.now()
+    #date = (today - timedelta(days=3)).strftime('%Y-%m-%d')
     #link = "https://drive.google.com/file/d/1cU9FzjT_e_gUC_eRycWcvi3mmP2n_XM7/view?usp=sharing"
     link = f"https://api.simurg.space/datafiles/map_files?date={date}"
     file_name = f"{date}.zip"
