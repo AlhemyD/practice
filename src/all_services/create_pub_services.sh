@@ -6,8 +6,12 @@ data_dir="/home/$user/practice/data/$1"
 
 # Перебираем файлы по дате в директории data
 for file in $(ls -t $data_dir); do
-    file_path="$data_dir/$file"
-    unit_name="station_@$file.service"
+
+    if [[ $file == *rnx ]]; then
+        unit_name="station_@${file%%_*}.service"
+    elif [[ $file == *o ]]; then
+        unit_name="station_@${file:0:4}.service"
+    fi
 
     # Проверяем, есть ли юнит файл для данного файла
     if [[ -f /etc/systemd/system/$unit_name ]]; then
