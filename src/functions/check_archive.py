@@ -7,17 +7,20 @@ import subprocess
 logger = get_logger("check")
 
 def check_zip_integrity(zip_file_path):
-    logger.info(f"I'm starting to check the archive for integrity")
+    #logger.info(f"I'm starting to check the archive for integrity")
     try:
         with zipfile.ZipFile(zip_file_path, 'r') as file:
             zip_test = file.testzip()
             directoria, file_name = os.path.split(zip_file_path)
             if zip_test is None:
                 logger.info(f"The archive is complete:  {file_name}")
+                return True
             else:
-                logger.error(f"The archive is damaged: {zip_test}")
+                #logger.error(f"The archive is damaged: {zip_test}")
+                return False
     except zipfile.BadZipFile as e:
-        logger.error(f"Error when opening a .zip archive: {e}")
+        #logger.error(f"Error when opening a .zip archive: {e}")
+        return False
 
 def check_gz(gz_file_path):
     logger.info(f"I'm starting to check the archive for integrity")
