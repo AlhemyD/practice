@@ -28,7 +28,7 @@ async def parsing_file_name(der:str, file_name: str):
     path="../../data"
     rnx_file_path = os.path.join(path, der, file_name)
     rnx_file_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),rnx_file_path)
-    logger.info("Starting parsing")
+    logger.info(f"Starting parsing - {rnx_file_path}")
     return parsing(rnx_file_path)
 
 
