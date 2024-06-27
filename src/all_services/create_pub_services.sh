@@ -1,8 +1,13 @@
 #!/bin/bash
 
 user=$(logname)
+if [ -d "/home/$user/practice/data" ]; then
+    pattern="/home/$user"
+else
+    pattern="/home/$user/src"
+fi
 
-data_dir="/home/$user/practice/data/$1"
+data_dir="$pattern/practice/data/$1"
 
 # Перебираем файлы по дате в директории data
 for file in $(ls -t $data_dir); do
@@ -21,7 +26,7 @@ for file in $(ls -t $data_dir); do
         fi
     else
         # Создаем новый юнит файл для данного файла
-        cp /home/$user/practice/src/all_services/station_@.service /etc/systemd/system/$unit_name
+        cp $pattern/practice/src/all_services/station_@.service /etc/systemd/system/$unit_name
         
 	if [[ $file == *rnx ]]; then
             sed -i "s/%i/${file%%_*}/g" /etc/systemd/system/$unit_name

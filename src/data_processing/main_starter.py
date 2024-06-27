@@ -11,7 +11,7 @@ def start_main():
     subprocess.run(f"python3 {main_path}", shell=True, check=True)
 
 logger.info("Data loading will start at 22:00")
-#start_main()
-scheduler = BlockingScheduler()
-scheduler.add_job(start_main, 'cron',hour=22, minute=0)
-scheduler.start()
+start_main()
+#scheduler = BlockingScheduler()
+#scheduler.add_job(start_main, 'cron',hour=22, minute=0)
+#scheduler.start()
