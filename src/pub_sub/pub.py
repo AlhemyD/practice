@@ -7,7 +7,7 @@ from logger import get_logger
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 
-logger=get_loger("pub")
+logger=get_logger("pub")
 '''
 скрипт вызывается командой вида^
 
