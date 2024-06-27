@@ -3,7 +3,7 @@ Description=Demon Service For FastAPI (scriprnx.py)
 
 [Service]
 # Command to execute when the service is started
-ExecStart=/usr/bin/python3 /home/%user/practice/src/question/scriprnx.py
+ExecStart=/usr/bin/python3 %scrippath
 
 # Disable Python's buffering of STDOUT and STDERR, so that output from the
 # service shows up immediately in systemd's logs
