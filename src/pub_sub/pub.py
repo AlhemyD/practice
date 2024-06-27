@@ -42,7 +42,7 @@ def publi(date, pattern, data_path):
         pub.publish(f"{pub.station}@%@%!{data}")
 
 
-    pub = Publisher(rnx_file_name,"192.168.0.103","station/data")
+    pub = Publisher(rnx_file_name,"localhost","station/data")
     pub.connect()
     pub.loop_start()
 #for i in data:
