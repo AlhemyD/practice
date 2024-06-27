@@ -20,15 +20,25 @@
 
 ## Установка ##
 
+0. Установите брокер mosquitto
+``sudo apt-get update``
+``sudo apt-get install mosquitto``
+1. Установите проект
 `` pip install -e git+https://github.com/AlhemyD/practice.git#egg=practice``
 
-или
+Появится папка src, в которой будет находится папка practice, где и есть наш проект
 
+или
+0. Установите брокер mosquitto
+``sudo apt-get update``
+`sudo apt-get install mosquitto`
 1. Скачайте репозиторий с помощью команды, выполнив ее в терминале, находясь в домашней директории:
 ``git clone https://github.com/AlhemyD/practice.git``
 2. Затем перейти в папку проекта командой ``cd practice``
 3. Установить командой ``sudo python3 setup.py install``
-   
+
+Появится папка practice, в которой находится наш проект
+
 ## Использование ##
 
 ### 1. Запустите main_starter.py
