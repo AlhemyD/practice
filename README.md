@@ -44,7 +44,7 @@
 ### 1. Запустите main_starter.py
 
 выполните команду вида 
-`` python3 practice/src/data_processing/main_starter.py``
+``sudo python3 practice/src/data_processing/main_starter.py``
 Пока этот файл запущен, каждый день в 22:00 будут скачиваться новые данные, а в 00:00 удаляться старые
    
 ### 2. Активируйте subscriber.py ###
