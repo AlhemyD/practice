@@ -16,6 +16,7 @@ else
     for file in $files; do
         rm "$file"
     done
+    systemctl stop $file
 
     systemctl daemon-reload
 

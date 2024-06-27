@@ -69,9 +69,11 @@ def publi(date, pattern, data_path):
 
         "2024-01-01 00:00:00 G12: 7.8285638894945935 22.766467356433278",
         '''
+        kdate=date
         for data in response["parse_data"]:
             if datetime.strptime(str(data.split(" ")[1]),"%H:%M:%S").time() >=datetime.now().time():
-                date=list(map(int, (datetime.now().strftime('%Y-%m-%d')).split("-")))
+                date=datetime.strptime(kdate, "%Y-%m-%d")+timedelta(days=201)
+                #date=list(map(int, (datetime.now().strftime('%Y-%m-%d')).split("-")))
 
                 time = list(map(int, str(data.split(" ")[1]).split(":")))
                 dt=datetime(date[0],date[1],date[2], time[0],time[1],time[2])

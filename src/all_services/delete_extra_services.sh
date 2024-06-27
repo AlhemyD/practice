@@ -10,6 +10,7 @@ else
         rm $file
     done
 
+    systemctl stop $file 
     systemctl daemon-reload
 
     echo "All unit files starting with 'station_@' and ending with 'service' have been deleted from /etc/systemd/system/ directory."
