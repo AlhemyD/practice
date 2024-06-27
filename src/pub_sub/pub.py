@@ -7,7 +7,7 @@ from logger import get_logger
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 
-
+logger=get_loger("pub")
 '''
 скрипт вызывается командой вида^
 
@@ -31,7 +31,7 @@ data_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),f'../../data/
 
 def publi(date, pattern, data_path):
     scheduler = BackgroundScheduler()
-    logger = get_logger("pub")
+    
 
     data_path=os.path.join(data_path,pattern)
     rnx_file_name=os.path.basename(glob.glob(data_path)[0])
@@ -52,12 +52,12 @@ def publi(date, pattern, data_path):
     link=f"http://localhost:8000/parsing/{date}/{rnx_file_name}"
     response = requests.get(link, stream=True).json()
     if "error" in response:
-        logger.error(f"error during request for station {pub.station} - error - {response['error']}")
+#        logger.error(f"error during request for station {pub.station} - error - {response['error']}")
         print(response)
         pub.disconnect()
         pub.loop_stop()
     elif "parse_data" in response:
-        logger.info(f"Parsed data for station {pub.station} successfully. Starting scheduler")
+#        logger.info(f"Parsed data for station {pub.station} successfully. Starting scheduler")
 
         '''
         '{} {}: {} {}'.format(
@@ -92,7 +92,7 @@ def publi(date, pattern, data_path):
             pub.disconnect()
             pub.loop_stop()
             scheduler.shutdown()
-            logger.warning(f"Ended publishing on {pub.station} due to {KeyboardInterrupt}")            
+#            logger.warning(f"Ended publishing on {pub.station} due to {KeyboardInterrupt}")            
             return {"error":f"Ended publishing on {pub.station} due to {KeyboardInterrupt}"}
 
     else:

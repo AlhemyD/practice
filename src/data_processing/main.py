@@ -6,7 +6,6 @@ from download import download_file_from_url
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../functions'))
 from check_archive import check_zip_integrity
 
-import schedule
 import subprocess
 from formatting import reformat_crx_to_rnx
 from parser import parsing
@@ -17,7 +16,7 @@ from datetime import datetime, timedelta
 logger = get_logger("main")
 today = datetime.now()
 #получаю завтрашнюю дату
-date = (today - timedelta(days=199)).strftime('%Y-%m-%d')
+date = (today - timedelta(days=200)).strftime('%Y-%m-%d')
 
 #создание директории data
 
@@ -59,13 +58,14 @@ logger.info("All files has been successfully reformatted")
 
 logger.info("Starting FastAPI")
 fastapi_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),'../all_services/create_scriprnx_service.sh')
-subprocess.run(f"", shell=True, check=True)
+subprocess.run(f"sudo bash {fastapi_path}", shell=True, check=True)
 
 
 
 logger.info("Starting a creation of DAEMONS")
 cpub_path=os.path.join(os.path.dirname(os.path.realpath(__file__)),'../all_services/create_pub_services.sh')
 subprocess.run(f"sudo bash {cpub_path} {date}", shell=True, check=True)
+logger.info("All DAEMONS were rised")
 #while True:
 #    schedule.run_pending()
 

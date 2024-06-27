@@ -1,7 +1,6 @@
 import sys, os
 sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../log'))
 from datetime import datetime, timedelta
-import schedule
 import time
 import requests
 from logger import get_logger

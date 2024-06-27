@@ -24,7 +24,7 @@ def reformat_crx_to_rnx(crx_file_path: str):
         try:
             subprocess.run([os.path.join(os.path.dirname(os.path.realpath(__file__)),'../../lib/RNXCMP_4.1.0_Linux_x86_32bit/bin/CRX2RNX'), crx_file_path, '-f'], check=True)
             subprocess.run(["rm", crx_file_path, '-f'], check=True)
-            logger.info(f'{crx_file_path} has been reformatted to {file_name_rnx}')
+#            logger.info(f'{crx_file_path} has been reformatted to {file_name_rnx}')
             #return {"file_name": file_name_rnx}
         except subprocess.CalledProcessError as e:
             logger.error(f"Error converting to RNX: {e}")
