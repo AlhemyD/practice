@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#files=$(ls /home/mgwooorl/practice/src/all_services/test/station_@*.service)
 files=$(ls /etc/systemd/system/station_@*.service)
 
 if [ -z "$files" ]; then
