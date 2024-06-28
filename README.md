@@ -31,13 +31,17 @@
 или
 
 0. Установите брокер mosquitto
+   
 ``sudo apt-get update``
 
 ``sudo apt-get install mosquitto``
+
 2. Скачайте репозиторий с помощью команды, выполнив ее в терминале, находясь в домашней директории:
 
 ``git clone https://github.com/AlhemyD/practice.git``
+
 3. Затем перейти в папку проекта командой ``cd practice``
+   
 4. Установить командой ``sudo python3 setup.py install``
 
 Появится папка practice, в которой находится наш проект
