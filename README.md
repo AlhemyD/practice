@@ -21,16 +21,6 @@
 ## Установка ##
 
 0. Установите брокер mosquitto
-``sudo apt-get update``
-``sudo apt-get install mosquitto``
-1. Установите проект
-`` pip install -e git+https://github.com/AlhemyD/practice.git#egg=practice``
-
-Появится папка src, в которой будет находится папка practice, где и есть наш проект
-
-или
-
-0. Установите брокер mosquitto
    
 ``sudo apt-get update``
 
@@ -51,8 +41,8 @@
 ### 1. Запустите main_starter.py
 
 выполните команду вида 
-``sudo python3 practice/src/data_processing/main_starter.py``
-Пока этот файл запущен, каждый день в 22:00 будут скачиваться новые данные, а в 00:00 удаляться старые
+``sudo python3 ~/practice/src/data_processing/main_starter.py``
+Пока этот файл запущен, каждый день в 22:00 будут скачиваться новые данные,
    
 ### 2. Активируйте клиент (sub.py) ###
 
