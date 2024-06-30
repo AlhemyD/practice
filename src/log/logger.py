@@ -15,7 +15,7 @@ def get_logger(logger_name):
     console_handler.setFormatter(FORMATTER)
     logger.addHandler(console_handler)
 
-    file_handler = TimedRotatingFileHandler(file_path, when='midnight')
+    file_handler = logging.FileHandler( file_path)
     file_handler.setFormatter(FORMATTER)
     logger.addHandler(file_handler)
 

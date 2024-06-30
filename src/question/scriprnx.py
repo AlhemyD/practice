@@ -27,7 +27,7 @@ async def reformat_crx_by_path(der:str, file_name: str):
 @app.get("/parsing/{der}/{file_name}")
 async def parsing_file_name(der:str, file_name: str):
     path="../../data"
-    if os.path.exists(os.path.dirname(os.path.realpath(__file__))):
+    if not("/src/practice/" in os.path.dirname(os.path.realpath(__file__))):
         rpath=os.path.dirname(os.path.realpath(__file__))
     else:
         rpath=os.path.join(os.path.dirname(os.path.realpath(__file__)),"../../../src/practice/src/data_processing")
